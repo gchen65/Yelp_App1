@@ -12,9 +12,13 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 
     var businesses: [Business]!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar = UISearchBar()        
+        searchDisplayController?.displaysSearchBarInNavigationBar = true
+
         
         tableView.delegate = self
         tableView.dataSource = self
